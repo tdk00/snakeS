@@ -1,4 +1,4 @@
-public class App01 {
+public class Application01 {
     public static void main(String[] args) {
         System.out.println("Hello from Kyiv!");
     }
