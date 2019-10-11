@@ -1,6 +1,27 @@
 public class Datatypes {
 
     public static void main(String[] args) {
+        // type widening
+        byte b1 = 5; // 1 byte
+        int i1 = b1; // 4 bytes
+
+        // type narrowing
+        int i5 = 555;
+        byte b2 = (byte)i5;
+        byte b3 = 555 % 256;
+        byte b4 = 555 & 0xFF;
+        System.out.println(b2);
+        System.out.println(b3);
+        System.out.println(b4);
+
+        float f1 = 4.5F;
+        int f2 = (int) f1;
+
+    }
+
+
+
+    public static void main4(String[] args) {
 
         for (int i = 0; i < 10; i = i + 1) {
             System.out.println(i);
