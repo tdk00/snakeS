@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Datatypes {
 
     public static void main5(String[] args) {
@@ -110,6 +112,22 @@ public class Datatypes {
 
     // arrays
     public static void main(String[] args) {
+        int[] a = new int[10];
+        // 0 .. a.length-1
+        int l = a.length; //10
+        int a0 = a[0];
+        int a9 = a[9];
+
+        Random r = new Random();
+        for (int i = 0; i < a.length; i++) {
+//            System.out.println(a[i]);
+            a[i] = r.nextInt(100);
+        }
+
+        for (int i = 0; i < a.length ; i++) {
+            System.out.println(a[i]);
+        }
+
 
     }
 }
