@@ -1,6 +1,6 @@
 public class Datatypes {
 
-    public static void main(String[] args) {
+    public static void main5(String[] args) {
         // type widening
         byte b1 = 5; // 1 byte
         int i1 = b1; // 4 bytes
@@ -16,10 +16,9 @@ public class Datatypes {
 
         float f1 = 4.5F;
         int f2 = (int) f1;
+        // b2 = "Hello";
 
     }
-
-
 
     public static void main4(String[] args) {
 
@@ -79,7 +78,6 @@ public class Datatypes {
 
     }
 
-
     public static void main2(String[] args) {
         int x = 1;
         long y = 1;
@@ -107,6 +105,11 @@ public class Datatypes {
         boolean b11 = true;
         boolean b12 = false;
 
+
+    }
+
+    // arrays
+    public static void main(String[] args) {
 
     }
 }
