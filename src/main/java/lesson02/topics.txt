@@ -2,12 +2,29 @@ hard skills:
 ------------
 - language control structures:
     - loops: for / while-do / do-while / break-continue
-
+- Logical operations: !, &&, |
 - operator arity: unary / binary / ternary
 - ternary operator
-- variable vs const / mutable-immutable
+
+- anonymous arrays
+- returning array
+- multidimensional arrays
+- copying array
+
+- default values [for class fields]
+- variable vs const / final / mutable - immutable
+- code structure: methods / functions / classes
+
+- varargs parameters
+- function overload
+
+- String
+- by value / by reference
 - primitive types vs references
 - null
+
+- Classes wrappers Integer / Long ...
+- MIN_VALUE / MAX_VALUE
 - classes / objects
 - code vs metacode
 
