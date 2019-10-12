@@ -1,15 +1,15 @@
 hard skills:
 ------------
-- language control structures:
-    - loops: for / while-do / do-while / break-continue
-- Logical operations: !, &&, |
-- operator arity: unary / binary / ternary
-- ternary operator
-
-- anonymous arrays
-- returning array
 - multidimensional arrays
 - copying array
+- anonymous arrays
+- returning array
+
+- language control structures:
+    - loops: for / while-do / do-while / break-continue
+- Logical operations: !, &&, ||
+- operator arity: unary / binary / ternary
+- ternary operator
 
 - default values [for class fields]
 - variable vs const / final / mutable - immutable
@@ -19,8 +19,8 @@ hard skills:
 - function overload
 
 - String
-- by value / by reference
-- primitive types vs references
+- passing by value / by reference
+- primitive types (int, boolean, char, ...) vs reference types (object and array)
 - null
 
 - Classes wrappers Integer / Long ...
@@ -28,6 +28,8 @@ hard skills:
 - classes / objects
 - code vs metacode
 
-
 soft skills:
 ------------
+- complexity breakdown
+- cutting corners
+- TODO vs comments

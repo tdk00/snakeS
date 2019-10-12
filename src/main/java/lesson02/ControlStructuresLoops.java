@@ -1,4 +1,4 @@
-package lesson01;
+package lesson02;
 
 public class ControlStructuresLoops {
     public static void main(String[] args) {
