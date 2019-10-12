@@ -1,0 +1,16 @@
+hard skills:
+------------
+- language control structures:
+    - loops: for / while-do / do-while / break-continue
+
+- operator arity: unary / binary / ternary
+- ternary operator
+- variable vs const / mutable-immutable
+- primitive types vs references
+- null
+- classes / objects
+- code vs metacode
+
+
+soft skills:
+------------
