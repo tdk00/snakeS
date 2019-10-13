@@ -10,6 +10,7 @@ hard skills:
 - Logical operations: !, &&, ||
 - operator arity: unary / binary / ternary
 - ternary operator
+- how to swap values of two variables between each other
 
 - default values [for class fields]
 - variable vs const / final / mutable - immutable
@@ -33,3 +34,4 @@ soft skills:
 - complexity breakdown
 - cutting corners
 - TODO vs comments
+- comments vs meaningful names for variables / classes / files / folders / etc.
