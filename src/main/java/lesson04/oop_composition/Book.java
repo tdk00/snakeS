@@ -1,4 +1,4 @@
-package lesson04.oop;
+package lesson04.oop_composition;
 
 public class Book {
   String name;
