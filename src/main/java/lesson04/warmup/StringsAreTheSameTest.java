@@ -11,7 +11,11 @@ import static org.junit.Assert.*;
 public class StringsAreTheSameTest {
 
   private Supplier<String> randomString = () ->
-      Stream.generate(() -> (char) (Math.random()*('Z'-'A'+1)+'A')).limit((int)(Math.random()*10+10)).map(Object::toString).reduce(String::concat).get();
+      Stream.generate(() -> (char) (Math.random()*('Z'-'A'+1)+'A'))
+          .limit((int)(Math.random()*10+10))
+          .map(Object::toString)
+          .reduce(String::concat)
+          .get();
 
   private StringsAreTheSame core;
 
