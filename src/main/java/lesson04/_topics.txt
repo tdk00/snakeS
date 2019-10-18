@@ -1,5 +1,7 @@
 hard skills:
 ------------
+- StringBuilder
+- StringJoiner, String.join
 - null
 - oop
 - abstract
