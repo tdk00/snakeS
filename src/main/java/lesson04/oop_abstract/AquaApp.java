@@ -1,6 +1,11 @@
 package lesson04.oop_abstract;
 
 public class AquaApp {
+
+  public int calculate(AbstractFish... fishes) {
+    return 0;
+  }
+
   public static void main(String[] args) {
 //    new AbstractFish();
     AbstractFish f1 = new FishGood();
