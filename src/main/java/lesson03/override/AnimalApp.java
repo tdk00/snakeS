@@ -1,4 +1,4 @@
-package lesson03;
+package lesson03.override;
 
 public class AnimalApp {
   public static void main(String[] args) {

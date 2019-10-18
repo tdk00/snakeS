@@ -1,10 +1,8 @@
-package lesson03;
-
-import org.junit.Test;
+package lesson03.testing;
 
 // https://mvnrepository.com
 // Junit
-public class CalculatorTest___ {
+public class CalculatorTestApproachIdea {
   public static void main(String[] args) {
     Calculator c = new Calculator();
 

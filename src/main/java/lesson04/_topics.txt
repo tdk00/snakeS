@@ -1,0 +1,14 @@
+hard skills:
+------------
+- null
+- oop
+- abstract
+- interfaces
+- constructors
+- patterns
+- compositions
+
+soft skills:
+------------
+- complexity breakdown
+- approaches

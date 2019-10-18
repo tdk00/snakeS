@@ -1,4 +1,4 @@
-package lesson03;
+package lesson03.hw_event;
 
 import org.junit.After;
 import org.junit.Before;
