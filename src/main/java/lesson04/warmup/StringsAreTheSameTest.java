@@ -16,7 +16,7 @@ public class StringsAreTheSameTest {
   private StringsAreTheSame core;
 
   @Before
-  public void before() {
+  public void beforemhgjhgjhfgv() {
     this.core = new StringsAreTheSame();
   }
 
@@ -24,6 +24,7 @@ public class StringsAreTheSameTest {
   public void check_the_same_1() {
     String one = "hello";
     String two = "hello";
+//    StringsAreTheSame core = new StringsAreTheSame();
     boolean actual = core.check(one, two);
     boolean expected = true;
     assertEquals(expected, actual);
