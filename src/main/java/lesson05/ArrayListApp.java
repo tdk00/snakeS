@@ -7,11 +7,34 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class ArrayListApp {
+
+  public static List<Integer> mult_by2(List<Integer> origin) {
+    return origin.stream().map(x -> x * 2).collect(Collectors.toList());
+  }
+
   public static void main(String[] args) {
+    ArrayList<Integer> ints = new ArrayList<Integer>() {{
+      add(111);
+      add(222);
+      add(333);
+    }};
+
     ArrayList<Integer> data = new ArrayList<>();
     for (int i = 0; i < 20; i++) {
       data.add((int) (Math.random()*20-10));
     }
+
+    List<Integer> multiplied = mult_by2(data);
+
+    data.indexOf(5);
+    data.remove(5);
+    data.remove((Integer) 5);
+    data.add(5, 999);
+    data.size();
+    data.isEmpty();
+    data.addAll(ints);
+
+
 
 //    data.add(123);
 //    data.add(56);
@@ -46,7 +69,10 @@ public class ArrayListApp {
     ArrayList<Integer> negatives = new ArrayList<>();
     data.forEach(item -> { if (item<0) negatives.add(item); });
 
-    List<Integer> negatives2 = data.stream()
+    List<Integer> negatives2 = data
+        .stream()
+        .filter(item -> item < 0)
+        .map(item -> item * 2)
         .filter(item -> item < 0)
         .collect(Collectors.toList());
 
