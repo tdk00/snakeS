@@ -1,0 +1,4 @@
+hard skills:
+------------
+- StringBuilder
+- StringJoiner, String.join
