@@ -29,7 +29,6 @@ numbers in brackets - corresponding character position in given string
 
 
 
-
 MAIN REQUIREMENT: the print() call is allowed only as the very last
 statement of your code.
 Please think in terms of data structures.
