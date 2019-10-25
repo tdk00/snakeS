@@ -11,3 +11,8 @@ hard skills:
 - sorting
 - Comparator / Comparable
 - several comparators
+- decorator pattern
+- date and time
+- method reference
+- exceptions
+- controller / service / DAO
