@@ -1,0 +1,10 @@
+hard skills:
+------------
+- Optional
+- date and time
+- controller / service / DAO
+- decorator pattern
+- file i/o
+- web socker i/o
+- java IO/NIO
+
