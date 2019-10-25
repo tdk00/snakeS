@@ -1,17 +1,13 @@
 hard skills:
 ------------
 - Collections
-    - List: ArrayList / LinkedList
-    - Map: HashMap / TreeMap
-    - Set: HashSet / TreeSet
-    - Stack
-    - Queue
-    - PriorityQueue
-    - DeQueue
+- PriorityQueue
+- DeQueue
+- anonymous classes / lambda evolution
 
-    - Comparator / Comparable
-    - anonymous classes / lambda evolution
-
-- Streams
+- Streams detailed
 - Optional
 
+- sorting
+- Comparator / Comparable
+- several comparators
