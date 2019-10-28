@@ -35,7 +35,7 @@ public class StreamGenerateApp {
   public static void main(String[] args) {
     Map<Integer, List<Integer>> collected = Stream.generate(() -> (int) (Math.random() * 40))
         .limit(20)
-        .collect(Collectors.groupingBy(i -> i % 3));
+        .collect(Collectors.groupingBy(i -> i < 10 ? 1 : 2));
     System.out.println(collected);
 
   }
