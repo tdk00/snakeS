@@ -7,10 +7,16 @@ import java.time.temporal.Temporal;
 
 /**
  * https://www.oracle.com/technical-resources/articles/java/jf14-date-time.html
+ * https://www.baeldung.com/java-8-date-time-intro
+ *
+ * https://habr.com/en/post/274811/
+ * https://habr.com/ru/post/274905/
+ *
+ * https://www.w3schools.com/java/java_date.asp
  *
  * new API - java.time.*
  */
-public class DateTimeApp1 {
+public class DateTimeApp {
 
   private void time_creating() {
     LocalTime now1 = LocalTime.now(); // system based
@@ -98,7 +104,7 @@ public class DateTimeApp1 {
   }
 
   public static void main(String[] args) {
-    DateTimeApp1 app = new DateTimeApp1();
+    DateTimeApp app = new DateTimeApp();
 //    app.time_creating();
 //    app.date_creating();
 //    app.datetime_creating();
