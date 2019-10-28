@@ -4,7 +4,14 @@ hard skills:
 - date and time
 - controller / service / DAO
 - decorator pattern
-- file i/o
-- web socker i/o
+- i/o in general
+- i/o classification:
+    - local / remote
+    - in memory / persistent
+    - ile / stream
+    - sync / async
+- in memory (List, Map ...)
+- File (read / write)
+- Connection, read / write
 - java IO/NIO
 
