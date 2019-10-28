@@ -43,6 +43,8 @@ public class StreamGenerateApp {
     String collected = Stream.generate(() -> (int) (Math.random() * 40))
         .limit(20)
         .map(v -> v.toString())
+//        .skip(2)
+        .peek(el -> System.out.println(el))
         .collect(Collectors.joining(" * ", "<<", ">>"));
     System.out.println(collected);
   }
