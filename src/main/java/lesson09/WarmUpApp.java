@@ -22,7 +22,8 @@ public class WarmUpApp {
   private List<String> load(File file) throws IOException {
     ArrayList<String> readed = new ArrayList<>();
     BufferedReader r = new BufferedReader(new FileReader(file));
-    r.lines().forEach(s -> readed.add(s));
+    Stream<String> lines = r.lines();
+    lines.forEach(s -> readed.add(s));
     r.close();
     return readed;
   }
