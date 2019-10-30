@@ -12,8 +12,8 @@ public class ShopApp {
 //        new DAOPersonHashMap();
         new DAOPersonSQL();
     DAO<Pizza> daoPizza =
-        new DAOPizzaHashMap();
-//        new DAOPizzaSQL();
+//        new DAOPizzaHashMap();
+        new DAOPizzaSQL();
 
     daoPerson.store(person1);
     daoPerson.store(person2);
