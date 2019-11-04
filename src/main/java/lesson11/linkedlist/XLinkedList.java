@@ -21,7 +21,6 @@ public class XLinkedList {
       head = item;
     } else {
       XItem current = head;
-
       while (current.next != null) {
         current = current.next;
       }
@@ -36,6 +35,9 @@ public class XLinkedList {
       current = current.next;
     }
     return false;
+  }
+
+  public void remove(int value) {
   }
 
   public String toString() {
