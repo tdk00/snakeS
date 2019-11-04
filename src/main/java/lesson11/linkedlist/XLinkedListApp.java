@@ -11,5 +11,6 @@ public class XLinkedListApp {
     System.out.println(found11); // true
     System.out.println(found33); // true
     System.out.println(found44); // false
+    System.out.println(xl.toString());
   }
 }

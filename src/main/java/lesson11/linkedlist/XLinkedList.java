@@ -30,12 +30,21 @@ public class XLinkedList {
   }
 
   public boolean contains(int value) {
+    XItem current = head;
+    while (current != null) {
+      if (current.value == value) return true;
+      current = current.next;
+    }
     return false;
   }
 
   public String toString() {
     StringJoiner sj = new StringJoiner(",");
-    sj.add();
+    XItem current = head;
+    while (current != null) {
+      sj.add(String.valueOf(current.value));
+      current = current.next;
+    }
     return sj.toString();
   }
 
