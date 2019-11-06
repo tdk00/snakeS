@@ -64,4 +64,11 @@ public class XLinkedList {
     return sj.toString();
   }
 
+  public int length() {
+    XItem curr = head;
+    int len = 0;
+    while((curr!=null)&&((len=len+1)>0)&&(curr=curr.next)!=null);
+    return len;
+  }
+
 }
