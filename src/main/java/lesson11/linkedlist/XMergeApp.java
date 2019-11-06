@@ -41,11 +41,12 @@ public class XMergeApp {
     return head;
   }
 
-  private void print(XLinkedList.XItem merged) {
+  private void print(final XLinkedList.XItem merged) {
     StringJoiner sj = new StringJoiner(",", "[", "]");
-    while (merged != null) {
-      sj.add(String.valueOf(merged.value));
-      merged = merged.next;
+    XLinkedList.XItem current = merged;
+    while (current != null) {
+      sj.add(String.valueOf(current.value));
+      current = current.next;
     }
     System.out.println(sj.toString());
   }
@@ -68,6 +69,15 @@ public class XMergeApp {
     System.out.println(xl1.toString());
     System.out.println(xl2.toString());
     XLinkedList.XItem merged = app.merge(xl1, xl2);
+    app.print(merged);
+    System.out.println(xl1.toString());
+    System.out.println(xl2.toString());
+    xl1.remove(5);
+    System.out.println(xl1.toString());
+    System.out.println(xl2.toString());
+    xl1.remove(1);
+    System.out.println(xl1.toString());
+    System.out.println(xl2.toString());
     app.print(merged);
   }
 }
