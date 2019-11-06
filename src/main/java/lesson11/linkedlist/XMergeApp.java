@@ -6,12 +6,12 @@ public class XMergeApp {
                           XLinkedList xl2) {
     XLinkedList.XItem head1 = xl1.getHead();
     XLinkedList.XItem head2 = xl2.getHead();
+    XLinkedList.XItem head = null;
 
-    return null;
+    return head;
   }
 
   private void print(XLinkedList.XItem merged) {
-
   }
 
   public static void main(String[] args) {
@@ -29,7 +29,5 @@ public class XMergeApp {
     xl2.add(8);
     XLinkedList.XItem merged = app.merge(xl1, xl2);
     app.print(merged);
-
   }
-
 }
