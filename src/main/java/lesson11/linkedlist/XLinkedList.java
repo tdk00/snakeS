@@ -15,6 +15,10 @@ public class XLinkedList {
 
   private XItem head;
 
+  public XItem getHead() {
+    return head;
+  }
+
   public void add(int value) {
     XItem item = new XItem(value);
     if (head == null) {
@@ -110,5 +114,7 @@ public class XLinkedList {
     }
     head = prev;
   }
+
+
 
 }
