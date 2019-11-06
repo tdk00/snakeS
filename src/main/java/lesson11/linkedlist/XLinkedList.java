@@ -38,10 +38,24 @@ public class XLinkedList {
   }
 
   public void remove(int value) {
+    XItem curr = head;
+    XItem prev = null;
+    while (curr != null) {
+      if (curr.value == value) {
+        if (prev == null) {
+          head = head.next;
+          break;
+        }
+        prev.next = curr.next;
+        break;
+      }
+      prev = curr;
+      curr = curr.next;
+    }
   }
 
   public String toString() {
-    StringJoiner sj = new StringJoiner(",");
+    StringJoiner sj = new StringJoiner(",","[","]");
     XItem current = head;
     while (current != null) {
       sj.add(String.valueOf(current.value));

@@ -19,6 +19,10 @@ public class XLinkedListApp {
     System.out.println(xl.toString()); // 11,33,44
     xl.remove(33);
     System.out.println(xl.toString()); // 11,44
+    xl.remove(11);
+    System.out.println(xl.toString()); // 44
+    xl.remove(44);
+    System.out.println(xl.toString()); //
 
   }
 }
