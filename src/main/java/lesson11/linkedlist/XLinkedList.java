@@ -90,13 +90,13 @@ public class XLinkedList {
     return length_rec(head);
   }
   // ----------------------------------------
-  public int length_rec2(XItem curr) {
-    if (curr == null) return 0;
-    return length_rec2(curr.next);
+  public int length_rec2(XItem curr, int count) {
+    if (curr == null) return count;
+    return length_rec2(curr.next, count + 1);
   }
 
   public int length2() {
-    return length_rec2(head);
+    return length_rec2(head, 0);
   }
   // ----------------------------------------
   public void revert() {
