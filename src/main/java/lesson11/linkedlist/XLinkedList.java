@@ -71,4 +71,16 @@ public class XLinkedList {
     return len;
   }
 
+  public void revert() {
+    XItem curr = head;
+    XItem prev = null;
+    while (curr != null) {
+      XItem next = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = next;
+    }
+    head = prev;
+  }
+
 }
