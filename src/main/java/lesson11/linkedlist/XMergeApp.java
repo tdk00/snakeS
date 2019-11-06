@@ -10,7 +10,12 @@ public class XMergeApp {
     return null;
   }
 
+  private void print(XLinkedList.XItem merged) {
+
+  }
+
   public static void main(String[] args) {
+    XMergeApp app = new XMergeApp();
     XLinkedList xl1 = new XLinkedList();
     XLinkedList xl2 = new XLinkedList();
     xl1.add(1);
@@ -22,7 +27,9 @@ public class XMergeApp {
     xl2.add(3);
     xl2.add(6);
     xl2.add(8);
-    XLinkedList.XItem merged = new XMergeApp().merge(xl1, xl2);
+    XLinkedList.XItem merged = app.merge(xl1, xl2);
+    app.print(merged);
 
   }
+
 }
