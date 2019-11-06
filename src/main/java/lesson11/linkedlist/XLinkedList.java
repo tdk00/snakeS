@@ -64,13 +64,41 @@ public class XLinkedList {
     return sj.toString();
   }
 
-  public int length() {
+  public int length_weird() {
     XItem curr = head;
     int len = 0;
     while((curr!=null)&&((len=len+1)>0)&&(curr=curr.next)!=null);
     return len;
   }
 
+  public int length_naive() {
+    XItem curr = head;
+    int len = 0;
+    while(curr != null) {
+      len++;
+      curr = curr.next;
+    }
+    return len;
+  }
+  // ----------------------------------------
+  public int length_rec(XItem curr) {
+    if (curr == null) return 0;
+    return length_rec(curr.next) + 1;
+  }
+
+  public int length() {
+    return length_rec(head);
+  }
+  // ----------------------------------------
+  public int length_rec2(XItem curr) {
+    if (curr == null) return 0;
+    return length_rec2(curr.next);
+  }
+
+  public int length2() {
+    return length_rec2(head);
+  }
+  // ----------------------------------------
   public void revert() {
     XItem curr = head;
     XItem prev = null;
