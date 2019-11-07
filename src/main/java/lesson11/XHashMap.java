@@ -1,7 +1,5 @@
 package lesson11;
 
-import java.util.LinkedList;
-
 public class XHashMap {
   private Integer[] data = new Integer[10];
 
@@ -17,8 +15,8 @@ public class XHashMap {
     XHashMap xm = new XHashMap();
     xm.put(101, 500);
     xm.put(205, 600);
+    // problem
     xm.put(305, 601);
-
   }
 
 }
