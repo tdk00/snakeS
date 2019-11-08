@@ -25,6 +25,8 @@ public class XTree {
     }
   }
 
+  private XItem root;
+
   public XTree() {
     throw new IllegalArgumentException("not implem yet");
   }
