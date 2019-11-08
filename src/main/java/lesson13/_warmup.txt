@@ -2,7 +2,7 @@
    signature: String filter(String origin)
 
 2. change the case to vice versa in a given string of characters
-   (a->A, b->B...). IF-ELSE, SWITCH-CASE is FORBIDDEN!
+   (a->A, b->B...). IF-ELSE, SWITCH-CASE, TERNARY (*?*:*) is FORBIDDEN!
    signature: String convert(String origin) abCD -> ABcd
 
 3. function to check whether the given number is a prime number

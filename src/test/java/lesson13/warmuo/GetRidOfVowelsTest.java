@@ -21,6 +21,6 @@ public class GetRidOfVowelsTest {
 
   @Test
   public void filter2() {
-    assertEquals("Wrld wr ", c.filter("World War II"));
+    assertEquals("Wrld Wr ", c.filter("World War II"));
   }
 }
