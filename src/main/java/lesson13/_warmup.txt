@@ -11,8 +11,8 @@
 4. function to check whether the given int number is a palindrome
    signature: boolean check(int origin)
 
-5. generate 10 first prime numbers
-   signature: List<Integer> gen_prime(int count)
+5. generate 'N' first prime numbers
+   signature: List<Integer> gen_prime(int N)
 
 6. find the maximum palindrome,
    which is the product of prime 5-digit numbers

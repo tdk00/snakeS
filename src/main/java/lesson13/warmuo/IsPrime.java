@@ -2,6 +2,10 @@ package lesson13.warmuo;
 
 public class IsPrime {
   boolean check(int origin) {
-    throw new IllegalArgumentException("not implemented yet");
+    if (origin == 2) return true;
+    for (int i = 2; i < Math.sqrt(origin); i++) {
+      if (origin % i == 0) return false;
+    }
+    return true;
   }
 }
