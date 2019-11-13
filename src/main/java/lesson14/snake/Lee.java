@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 /**
  * https://en.wikipedia.org/wiki/Lee_algorithm
- *"https://ru.wikipedia.org/wiki/Алгоритм_Ли
+ * https://ru.wikipedia.org/wiki/Алгоритм_Ли
  */
 public class Lee {
   private final static List<LeePoint> deltas = new ArrayList<LeePoint>(){{
@@ -76,11 +76,10 @@ public class Lee {
         .collect(Collectors.toSet());
   }
 
-  LeePoint neighborByValue(LeePoint point, int value) {
+  List<LeePoint> neighborsByValue(LeePoint point, int value) {
     return neighbors(point).stream()
         .filter(p -> get(p) == value)
-        .findFirst()
-        .get();
+        .collect(Collectors.toList());
   }
 
   private void initBoard(List<LeePoint> obstacles) {
@@ -98,7 +97,7 @@ public class Lee {
 //    return trace(
 //        new LeePoint(start),
 //        new LeePoint(finish),
-//        obstacles.stream().map(LeePoint::new).collect(Collectors.toList()),
+//        obstacles.stream().map(p -> new LeePoint::new).collect(Collectors.toList()),
 //        debug);
 //  }
 
@@ -124,6 +123,7 @@ public class Lee {
       curr.addAll(next);
       next.clear();
     }
+
     if (!found) return Optional.empty();
     // path found. collect it
     set(start, 0);
@@ -132,7 +132,7 @@ public class Lee {
     LeePoint curr_p = finish;
     while (counter[0] > 0) {
       counter[0]--;
-      LeePoint prev_p = neighborByValue(curr_p, counter[0]);
+      LeePoint prev_p = neighborsByValue(curr_p, counter[0]).get(0);
       path.add(prev_p);
       curr_p = prev_p;
     }
