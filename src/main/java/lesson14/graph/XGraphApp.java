@@ -2,7 +2,7 @@ package lesson14.graph;
 
 public class XGraphApp {
   public static void main(String[] args) {
-    XGraph g = new XGraph(14);
+    XGraph g = new XGraph(15);
     g.add(0, 1);
 
     g.add(1, 2);
