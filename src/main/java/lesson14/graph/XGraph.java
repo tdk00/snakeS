@@ -22,4 +22,12 @@ public class XGraph {
   public void remove(int from, int to) {
     links[from].remove(Integer.valueOf(to));
   }
+
+  public void printDFS() {
+
+  }
+
+  public void printBFS() {
+
+  }
 }

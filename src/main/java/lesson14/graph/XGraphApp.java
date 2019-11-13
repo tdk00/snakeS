@@ -25,5 +25,8 @@ public class XGraphApp {
     g.add(7, 13);
     g.add(7, 14);
 
+    g.printBFS();
+    g.printDFS();
+
   }
 }
