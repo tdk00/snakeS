@@ -1,4 +1,4 @@
-package lesson13.warmuo;
+package lesson13.warmup;
 
 public class IsPalindrome {
   public boolean check(long number) {

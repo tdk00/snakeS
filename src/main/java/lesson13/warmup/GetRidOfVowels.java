@@ -1,10 +1,8 @@
-package lesson13.warmuo;
+package lesson13.warmup;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class GetRidOfVowels {
   String filter(String origin) {

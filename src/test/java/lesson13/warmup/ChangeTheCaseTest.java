@@ -1,4 +1,4 @@
-package lesson13.warmuo;
+package lesson13.warmup;
 
 import org.junit.Before;
 import org.junit.Test;
