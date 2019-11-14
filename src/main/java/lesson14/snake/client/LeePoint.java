@@ -1,14 +1,14 @@
-package lesson14.snake;
+package lesson14.snake.client;
 
-//import com.codenjoy.dojo.services.Point;
+import com.codenjoy.dojo.services.Point;
 
 public class LeePoint {
   private int x;
   private int y;
 
-//  public LeePoint(Point p) {
-//    this(p.getX(), p.getY());
-//  }
+  public LeePoint(Point p) {
+    this(p.getX(), p.getY());
+  }
 
   public LeePoint(int x, int y) {
     this.x = x;

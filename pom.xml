@@ -4,9 +4,25 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.danit</groupId>
+<!--  this section snake ONLY  -->
+    <parent>
+        <groupId>com.codenjoy</groupId>
+        <artifactId>games</artifactId>
+        <version>1.0.28</version>
+    </parent>
+
     <artifactId>az-be1-classes</artifactId>
-    <version>1.0-SNAPSHOT</version>
+<!--  we commented this things because of importing parent POM.XML  -->
+<!--  in order to make snake working  -->
+<!--    <groupId>org.danit</groupId>-->
+<!--    <version>1.0-SNAPSHOT</version>-->
+
+    <repositories>
+        <repository>
+            <id>codenjoy-releases</id>
+            <url>https://github.com/codenjoyme/codenjoy-repo/raw/master/snapshots</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
@@ -52,7 +68,11 @@
             <artifactId>assertj-core</artifactId>
             <version>3.11.1</version>
         </dependency>
+        <!--  snake only section -->
+        <dependency>
+            <groupId>com.codenjoy</groupId>
+            <artifactId>engine</artifactId>
+        </dependency>
     </dependencies>
-
 </project>
 

@@ -1,13 +1,13 @@
-package lesson14.snake;
+package lesson14.snake.client;
 
-//import com.codenjoy.dojo.services.Point;
+import com.codenjoy.dojo.services.Point;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
 /**
  * https://en.wikipedia.org/wiki/Lee_algorithm
- * https://ru.wikipedia.org/wiki/Алгоритм_Ли
+ *"https://ru.wikipedia.org/wiki/Алгоритм_Ли
  */
 public class Lee {
   private final static List<LeePoint> deltas = new ArrayList<LeePoint>(){{
@@ -36,7 +36,7 @@ public class Lee {
     return " __ ";
   }
 
-  void printMe(List<LeePoint> path) {
+  public void printMe(List<LeePoint> path) {
     for (int row = 0; row < dimY; row++) {
       for (int col = 0; col < dimX; col++) {
         LeePoint p = new LeePoint(col, row);
@@ -76,10 +76,11 @@ public class Lee {
         .collect(Collectors.toSet());
   }
 
-  List<LeePoint> neighborsByValue(LeePoint point, int value) {
+  LeePoint neighborByValue(LeePoint point, int value) {
     return neighbors(point).stream()
         .filter(p -> get(p) == value)
-        .collect(Collectors.toList());
+        .findFirst()
+        .get();
   }
 
   private void initBoard(List<LeePoint> obstacles) {
@@ -89,17 +90,17 @@ public class Lee {
     obstacles.forEach(p -> set(p, OBSTACLE));
   }
 
-//  public Optional<List<LeePoint>> trace(Point start, Point finish, List<Point> obstacles) {
-//    return trace(start, finish, obstacles, false);
-//  }
-//
-//  public Optional<List<LeePoint>> trace(Point start, Point finish, List<Point> obstacles, boolean debug) {
-//    return trace(
-//        new LeePoint(start),
-//        new LeePoint(finish),
-//        obstacles.stream().map(p -> new LeePoint::new).collect(Collectors.toList()),
-//        debug);
-//  }
+  public Optional<List<LeePoint>> trace(Point start, Point finish, List<Point> obstacles) {
+    return trace(start, finish, obstacles, false);
+  }
+
+  public Optional<List<LeePoint>> trace(Point start, Point finish, List<Point> obstacles, boolean debug) {
+    return trace(
+        new LeePoint(start),
+        new LeePoint(finish),
+        obstacles.stream().map(LeePoint::new).collect(Collectors.toList()),
+        debug);
+  }
 
   public Optional<List<LeePoint>> trace(LeePoint start, LeePoint finish, List<LeePoint> obstacles, boolean debug) {
     initBoard(obstacles);
@@ -123,7 +124,6 @@ public class Lee {
       curr.addAll(next);
       next.clear();
     }
-
     if (!found) return Optional.empty();
     // path found. collect it
     set(start, 0);
@@ -132,7 +132,7 @@ public class Lee {
     LeePoint curr_p = finish;
     while (counter[0] > 0) {
       counter[0]--;
-      LeePoint prev_p = neighborsByValue(curr_p, counter[0]).get(0);
+      LeePoint prev_p = neighborByValue(curr_p, counter[0]);
       path.add(prev_p);
       curr_p = prev_p;
     }
