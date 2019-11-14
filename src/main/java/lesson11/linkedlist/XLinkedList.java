@@ -58,6 +58,19 @@ public class XLinkedList {
     }
   }
 
+  private void toStringR(XItem curr, StringJoiner sj) {
+    if (curr == null) return;
+    sj.add(String.valueOf(curr.value));
+    toStringR(curr.next, sj);
+  }
+
+  public String toStringRec() {
+    StringJoiner sj = new StringJoiner(",","[","]");
+    toStringR(head, sj);
+    return sj.toString();
+  }
+
+  @Override
   public String toString() {
     StringJoiner sj = new StringJoiner(",","[","]");
     XItem current = head;

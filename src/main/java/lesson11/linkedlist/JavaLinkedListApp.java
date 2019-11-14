@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-public class LinkedListApp {
+public class JavaLinkedListApp {
   public static void main(String[] args) {
     LinkedList<Integer> ll = new LinkedList<>();
     ll.add(1);
