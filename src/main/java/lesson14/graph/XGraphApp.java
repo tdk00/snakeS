@@ -1,7 +1,11 @@
 package lesson14.graph;
 
+import java.util.List;
+import java.util.StringJoiner;
+
 public class XGraphApp {
-  public static void main(String[] args) {
+
+  public XGraph create() {
     XGraph g = new XGraph(15);
     g.add(0, 1);
 
@@ -25,10 +29,29 @@ public class XGraphApp {
     g.add(7, 13);
     g.add(7, 14);
 
-    g.printAllUnordered();
-    g.printAllBFS();
-    g.printAllDFSrec();
-    g.printAllDFSnr();
+    return g;
+  }
 
+  private static String list_to_string(List<Integer> vertices) {
+    StringJoiner sj = new StringJoiner(", ", "<", ">");
+    vertices.forEach(n -> sj.add(String.valueOf(n)));
+    return sj.toString();
+  }
+
+  void print(String msg, List<Integer> data) {
+    System.out.printf(msg, list_to_string(data));
+  }
+
+  public static void main(String[] args) {
+    XGraphApp app = new XGraphApp();
+    XGraph g = app.create();
+    TraverseDFS dfs = new TraverseDFS(g);
+    TraverseBFS bfs = new TraverseBFS(g);
+    TraverseUnordered rnd = new TraverseUnordered(g);
+
+    app.print("Unordered traversal      : %s\n", rnd.traverse());
+    app.print("BFS traversal            : %s\n", bfs.traverse());
+    app.print("DFS traversal (recursive): %s\n", dfs.traverse_recursive(0));
+    app.print("DFS traversal (iterative): %s\n", dfs.traverse_iterative(0));
   }
 }
