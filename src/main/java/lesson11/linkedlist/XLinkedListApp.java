@@ -16,9 +16,13 @@ public class XLinkedListApp {
     System.out.println(found44); // false
 
     System.out.println(xl.toString()); // 11,22,33,44
-    System.out.println(xl.toStringRec()); // 11,22,33,44
-//    xl.revert();
-//    System.out.println(xl.toString());
+//    System.out.println(xl.toStringRec()); // 11,22,33,44
+    xl.revert();
+    System.out.println(xl.toString());
+    xl.revert_r();
+    System.out.println(xl.toString());
+    xl.revert_r2();
+    System.out.println(xl.toString());
 //    System.out.println(xl.length());
 //    xl.remove(22);
 //    System.out.println(xl.toString()); // 11,33,44
