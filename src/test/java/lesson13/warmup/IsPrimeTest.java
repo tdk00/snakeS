@@ -29,6 +29,7 @@ public class IsPrimeTest {
     assertEquals(true, c.check(3));
   }
 
+  // intentionally written with a mistake
   @Test
   public void check4() {
     assertEquals(false, c.check(4));
