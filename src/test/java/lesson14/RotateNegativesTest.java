@@ -1,5 +1,6 @@
 package lesson14;
 
+import lesson15.RotateNegatives;
 import org.junit.Before;
 import org.junit.Test;
 

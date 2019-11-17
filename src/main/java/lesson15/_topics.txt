@@ -1,13 +1,3 @@
 - warm up
 
-- step project pull-ip
-
-- maven
-- installation
-- web architecture
-- http basics
-- html
-- css
-- requests GET/POST
-
-- minimal web application
+- step project pull-up

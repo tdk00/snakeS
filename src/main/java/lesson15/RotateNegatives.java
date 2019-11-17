@@ -1,4 +1,4 @@
-package lesson14;
+package lesson15;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
 public class RotateNegatives {
 
   public int[] rotate(int[] origin) {
-    int data[] = origin.clone();
+    int[] data = origin.clone();
 
     List<Integer> neg_normal = IntStream.range(0, origin.length)
         .filter(idx -> data[idx] < 0)

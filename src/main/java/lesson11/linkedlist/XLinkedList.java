@@ -115,19 +115,43 @@ public class XLinkedList {
   public int length2() {
     return length_rec2(head, 0);
   }
-  // ----------------------------------------
+  // -- REVERT ITERATIVE --------------------------------------
   public void revert() {
     XItem curr = head;
     XItem prev = null;
     while (curr != null) {
-      XItem next = curr.next;
+      XItem saved = curr.next;
       curr.next = prev;
       prev = curr;
-      curr = next;
+      curr = saved;
     }
     head = prev;
   }
+  // -- REVERT RECURSIVE #1 --------------------------------------
+  private XItem revert_r(XItem curr, XItem prev) {
+    if (curr == null) return prev;
+    XItem saved = curr.next;
+    curr.next = prev;
+    return revert_r(saved, curr);
+  }
 
+  public void revert_r() {
+    head = revert_r(head, null);
+  }
 
+  // -- REVERT RECURSIVE #2 --------------------------------------
+  private void revert_r2(XItem curr, XItem prev) {
+    if (curr == null) {
+      head = prev;
+      return;
+    }
+    XItem saved = curr.next;
+    curr.next = prev;
+    revert_r2(saved, curr);
+  }
+
+  public void revert_r2() {
+    revert_r2(head, null);
+  }
 
 }
