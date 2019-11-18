@@ -1,7 +1,7 @@
 |===========|
 |  Task 1.  |
 |===========|
-Probably all of you aware of general rule
+Probably all of you aware of the general rule
 of creating English sentences.
 It is: subject + verb + object
 
