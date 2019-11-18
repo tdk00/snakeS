@@ -18,15 +18,42 @@ public class CalcServlet extends HttpServlet {
     }
   }
 
+  private Optional<String> converts(String param) {
+    try {
+      switch (param) {
+        case "plus":   return Optional.of("+");
+        case "minus":  return Optional.of("-");
+        case "mult":   return Optional.of("*");
+        case "divide": return Optional.of("/");
+      }
+      return Optional.empty();
+    } catch (Exception ignored) { }
+    return Optional.empty();
+  }
+
   private Optional<Integer> divide(int x, int y) {
     if (y==0) return Optional.empty();
     return Optional.of(x/y);
   }
 
-  private String calc(String p1, String p2, String op) {
+  private Optional<Integer> do_op(String p1, String p2, String op) {
     Optional<Integer> p1o = convert(p1);
     Optional<Integer> p2o = convert(p2);
-    return "";
+    Optional<String> oo = converts(op);
+    return oo.flatMap(o -> p1o.flatMap(i1 -> p2o.flatMap(i2 -> {
+      switch (o) {
+        case "+": return Optional.of(i1 + i2);
+        case "-": return Optional.of(i1 - i2);
+        case "*": return Optional.of(i1 * i2);
+        case "/": return divide(i1, i2);
+      }
+      return Optional.empty();
+    })));
+  }
+
+  private String calc(String p1, String p2, String op) {
+    Optional<Integer> result = do_op(p1, p2, op);
+    return result.map(String::valueOf).orElse("Smth went wrong");
   }
 
   @Override
