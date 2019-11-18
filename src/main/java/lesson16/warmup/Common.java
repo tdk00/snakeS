@@ -4,25 +4,25 @@ import java.util.*;
 
 public class Common {
 
-  public static List<String> list(String... strings) {
+  public static <T> List<T> list(T... strings) {
     return Arrays.asList(strings);
   }
 
-  public static Map<String, List<String>> map(Map.Entry<String, List<String>>... items) {
-    HashMap<String, List<String>> m = new HashMap<>();
-    for (Map.Entry<String, List<String>> item: items) {
+  public static <K> Map<K, List<String>> map(Map.Entry<K, List<String>>... items) {
+    HashMap<K, List<String>> m = new HashMap<>();
+    for (Map.Entry<K, List<String>> item: items) {
       m.put(item.getKey(), item.getValue());
     }
     return m;
   }
 
-  public static Map.Entry<String, List<String>> of(String key, List<String> value) {
+  public static <K> Map.Entry<K, List<String>> of(K key, List<String> value) {
     return new AbstractMap.SimpleEntry<>(key, value);
   }
 
-  public static String combine(String... words) {
+  public static <T> String combine(T... words) {
     StringJoiner sj = new StringJoiner(" ");
-    for (String word: words) sj.add(word);
+    for (T word: words) sj.add(word.toString());
     return sj.toString();
   }
 }
