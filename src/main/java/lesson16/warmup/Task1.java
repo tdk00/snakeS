@@ -44,11 +44,14 @@ public class Task1 {
   private List<String> solution4(List<String> subjects,
                                  List<String> verbs,
                                  List<String> objects) {
-    return subjects.stream().flatMap((String subj) ->
-        verbs.stream().flatMap((String verb) ->
-            objects.stream().map((String obj) ->
+
+    return subjects.stream().flatMap(subj ->
+        verbs.stream().flatMap(verb ->
+            objects.stream().map(obj ->
                 combine(subj, verb, obj)
-    ))).collect(Collectors.toList());
+    )))
+
+        .collect(Collectors.toList());
   }
 
   public static void main(String[] args) {
