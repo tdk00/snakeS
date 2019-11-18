@@ -12,6 +12,7 @@ It is: subject + verb + object
   List<String> verbs =    list("wrote", "chased", "slept on")
   List<String> objects =  list("the book","the ball","the bed")
 
+  List<String> sentences = all_possible(subjects, verbs, objects)
 ------------
 |  Goal:   |
 ------------
