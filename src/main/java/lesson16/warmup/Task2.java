@@ -10,14 +10,11 @@ public class Task2 {
 
   List<String> solution1(Map<String, List<String>> assoc_subj_verb,
                          Map<String, List<String>> assoc_verb_obj) {
-    List<String> outcome =
-    subjects.stream().flatMap(subj ->
-        verbs.stream().flatMap(verb ->
-            objects.stream().map(obj ->
-                combine(subj, verb, obj)
-            )))
-        .collect(Collectors.toList());
-    return outcome;
+    return assoc_subj_verb.keySet().stream().flatMap(subj ->
+        assoc_subj_verb.get(subj).stream().flatMap(verb ->
+                assoc_verb_obj.get(verb).stream().map(obj ->
+                    combine(subj, verb, obj)
+        ))).collect(Collectors.toList());
   }
 
   public static void main(String[] args) {
