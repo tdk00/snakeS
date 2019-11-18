@@ -7,18 +7,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class HelloServlet extends HttpServlet {
+public class LoginServlet extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     PrintWriter writer = resp.getWriter();
-    writer.println("HelloServlet.GET");
-    writer.close();
-  }
-
-  @Override
-  protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    PrintWriter writer = resp.getWriter();
-    writer.println("HelloServlet.POST");
+    writer.println("LoginServlet.GET");
     writer.close();
   }
 }

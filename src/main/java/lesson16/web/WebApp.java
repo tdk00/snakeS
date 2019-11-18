@@ -10,6 +10,8 @@ public class WebApp {
 
     ServletContextHandler handler = new ServletContextHandler();
 
+    handler.addServlet(new ServletHolder(new LoginServlet()), "/login/*");
+    handler.addServlet(new ServletHolder(new CalcServlet()), "/calc/*");
     handler.addServlet(new ServletHolder(new HelloServlet()), "/*");
 
     server.setHandler(handler);
