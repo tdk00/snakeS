@@ -1,4 +1,4 @@
-package lesson03.statix;
+package lesson03.jmm.statix;
 
 public class StaticX {
   int age;
