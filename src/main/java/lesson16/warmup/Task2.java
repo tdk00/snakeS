@@ -2,16 +2,22 @@ package lesson16.warmup;
 
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
-import static lesson16.warmup.Common.list;
-import static lesson16.warmup.Common.map;
-import static lesson16.warmup.Common.of;
+import static lesson16.warmup.Common.*;
 
 public class Task2 {
 
   List<String> solution1(Map<String, List<String>> assoc_subj_verb,
                          Map<String, List<String>> assoc_verb_obj) {
-    throw new IllegalArgumentException("not implemented yet");
+    List<String> outcome =
+    subjects.stream().flatMap(subj ->
+        verbs.stream().flatMap(verb ->
+            objects.stream().map(obj ->
+                combine(subj, verb, obj)
+            )))
+        .collect(Collectors.toList());
+    return outcome;
   }
 
   public static void main(String[] args) {
