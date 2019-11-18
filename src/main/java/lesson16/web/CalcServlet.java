@@ -19,16 +19,7 @@ public class CalcServlet extends HttpServlet {
   }
 
   private Optional<String> converts(String param) {
-    try {
-      switch (param) {
-        case "plus":   return Optional.of("+");
-        case "minus":  return Optional.of("-");
-        case "mult":   return Optional.of("*");
-        case "divide": return Optional.of("/");
-      }
-      return Optional.empty();
-    } catch (Exception ignored) { }
-    return Optional.empty();
+    return Optional.ofNullable(param);
   }
 
   private Optional<Integer> divide(int x, int y) {
@@ -42,10 +33,10 @@ public class CalcServlet extends HttpServlet {
     Optional<String> oo = converts(op);
     return oo.flatMap(o -> p1o.flatMap(i1 -> p2o.flatMap(i2 -> {
       switch (o) {
-        case "+": return Optional.of(i1 + i2);
-        case "-": return Optional.of(i1 - i2);
-        case "*": return Optional.of(i1 * i2);
-        case "/": return divide(i1, i2);
+        case "plus": return Optional.of(i1 + i2);
+        case "minus": return Optional.of(i1 - i2);
+        case "mult": return Optional.of(i1 * i2);
+        case "divide": return divide(i1, i2);
       }
       return Optional.empty();
     })));
