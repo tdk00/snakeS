@@ -8,14 +8,21 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class CalcServlet extends HttpServlet {
+
+  private String calc(String p1, String p2, String op) {
+    return "";
+  }
+
   @Override
   protected void doGet(HttpServletRequest req,
                        HttpServletResponse resp) throws ServletException, IOException {
-    String x = req.getParameter("x");
-    String y = req.getParameter("y");
 
     PrintWriter writer = resp.getWriter();
-    writer.printf("CalcServlet.GET x=%s y=%s", x, y);
+    writer.printf("Calculator:%s", calc(
+        req.getParameter("x"),
+        req.getParameter("y"),
+        req.getParameter("op")
+    ));
     writer.close();
   }
 }
