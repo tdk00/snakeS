@@ -6,10 +6,9 @@ import org.eclipse.jetty.servlet.ServletHolder;
 
 public class WebApp {
   public static void main(String[] args) throws Exception {
-    Server server = new Server(8080);
+    Server server = new Server(8081);
     ServletContextHandler handler = new ServletContextHandler();
-    handler.addServlet(ServletAssets.class, "/assets/*");
-    handler.addServlet(new ServletHolder(new ServletRedirectTo("/login")), "/*");
+    handler.addServlet(new ServletHolder(new HelloServlet()), "/*");
     server.setHandler(handler);
     server.start();
     server.join();
