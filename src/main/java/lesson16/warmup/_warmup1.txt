@@ -9,8 +9,8 @@ It is: subject + verb + object
 |  Given:  |
 ------------
   List<String> subjects = list("Noel", "The cat", "The dog")
-  List<String> verbs = list("wrote", "chased", "slept on")
-  List<String> objects = list("the book","the ball","the bed")
+  List<String> verbs =    list("wrote", "chased", "slept on")
+  List<String> objects =  list("the book","the ball","the bed")
 
 ------------
 |  Goal:   |
