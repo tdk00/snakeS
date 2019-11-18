@@ -28,6 +28,7 @@ public class Task2 {
         of("barked at", list("the postman", "the car", "the cat")));
 
     Task2 app = new Task2();
-    app.solution1(assoc_subj_verb, assoc_verb_obj).forEach(System.out::println);
+    List<String> sentences = app.solution1(assoc_subj_verb, assoc_verb_obj);
+    sentences.forEach(System.out::println);
   }
 }
