@@ -10,7 +10,7 @@ import java.util.Optional;
 
 public class CalcServlet extends HttpServlet {
 
-  private Optional<Integer> convert(String param) {
+  private Optional<Integer> convert_i(String param) {
     try {
       return Optional.of(Integer.parseInt(param));
     } catch (Exception ignored) {
@@ -18,7 +18,7 @@ public class CalcServlet extends HttpServlet {
     }
   }
 
-  private Optional<String> converts(String param) {
+  private Optional<String> wrap(String param) {
     return Optional.ofNullable(param);
   }
 
@@ -28,14 +28,15 @@ public class CalcServlet extends HttpServlet {
   }
 
   private Optional<Integer> do_op(String p1, String p2, String op) {
-    Optional<Integer> p1o = convert(p1);
-    Optional<Integer> p2o = convert(p2);
-    Optional<String> oo = converts(op);
-    return oo.flatMap(o -> p1o.flatMap(i1 -> p2o.flatMap(i2 -> {
+    Optional<Integer> p1o = convert_i(p1);
+    Optional<Integer> p2o = convert_i(p2);
+    Optional<String> opo = wrap(op);
+
+    return opo.flatMap(o -> p1o.flatMap(i1 -> p2o.flatMap(i2 -> {
       switch (o) {
-        case "plus": return Optional.of(i1 + i2);
-        case "minus": return Optional.of(i1 - i2);
-        case "mult": return Optional.of(i1 * i2);
+        case "plus":   return Optional.of(i1 + i2);
+        case "minus":  return Optional.of(i1 - i2);
+        case "mult":   return Optional.of(i1 * i2);
         case "divide": return divide(i1, i2);
       }
       return Optional.empty();
@@ -43,8 +44,9 @@ public class CalcServlet extends HttpServlet {
   }
 
   private String calc(String p1, String p2, String op) {
-    Optional<Integer> result = do_op(p1, p2, op);
-    return result.map(String::valueOf).orElse("Smth went wrong");
+    return do_op(p1, p2, op)
+        .map(r -> String.format("The result is: %d", r))
+        .orElse("Smth went wrong with parameters");
   }
 
   @Override
