@@ -2,6 +2,7 @@ package lesson17;
 
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
+import org.eclipse.jetty.servlet.ServletHolder;
 
 public class WebApp17 {
   public static void main(String[] args) throws Exception {
@@ -14,11 +15,9 @@ public class WebApp17 {
  */
     handler.addServlet(ServletFile.class, "/static/*");
     handler.addServlet(LoginServlet.class, "/login/*");
-    String redirectTo = "/login";
 
-    handler.addServlet(ServletRedirect.class, "/*");
-
-
+    handler.addServlet(new ServletHolder(new ServletRedirect("/extra2/*")), "/extra/*");
+    handler.addServlet(new ServletHolder(new ServletRedirect("/login")), "/*");
 
     server.setHandler(handler);
     server.start();
