@@ -19,6 +19,10 @@ public class WebApp17 {
     Auth authService = new AuthService();
     handler.addServlet(new ServletHolder(new LoginServlet(authService)), "/login/*");
 
+    TemplateEngine te = new TemplateEngine("./content/templates");
+
+    handler.addServlet(new ServletHolder(new TemplateServlet(te)), "/te/*");
+
     handler.addServlet(new ServletHolder(new ServletRedirect("/extra2/*")), "/extra/*");
     handler.addServlet(new ServletHolder(new ServletRedirect("/login")), "/*");
 
