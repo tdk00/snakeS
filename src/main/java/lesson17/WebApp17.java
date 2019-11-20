@@ -1,5 +1,7 @@
 package lesson17;
 
+import lesson17.service.Auth;
+import lesson17.service.AuthService;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
@@ -14,7 +16,8 @@ public class WebApp17 {
  * /static/img/total.png
  */
     handler.addServlet(ServletFile.class, "/static/*");
-    handler.addServlet(LoginServlet.class, "/login/*");
+    Auth authService = new AuthService();
+    handler.addServlet(new ServletHolder(new LoginServlet(authService)), "/login/*");
 
     handler.addServlet(new ServletHolder(new ServletRedirect("/extra2/*")), "/extra/*");
     handler.addServlet(new ServletHolder(new ServletRedirect("/login")), "/*");
