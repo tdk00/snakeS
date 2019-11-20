@@ -14,6 +14,7 @@ public class WebApp17 {
  */
     handler.addServlet(ServletFile.class, "/static/*");
     handler.addServlet(LoginServlet.class, "/login/*");
+    String redirectTo = "/login";
 
     handler.addServlet(ServletRedirect.class, "/*");
 
