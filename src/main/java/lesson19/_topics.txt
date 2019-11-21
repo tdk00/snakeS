@@ -1,0 +1,9 @@
+- warm up
+
+- nested queries
+- subqueries
+- constraints
+- triggers
+- indices
+- transactions
+- transactions isolation levels

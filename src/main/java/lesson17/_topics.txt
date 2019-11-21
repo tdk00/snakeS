@@ -1,0 +1,13 @@
+- warm up
+
+- dependency injection
+- html basics
+- css basic
+
+- servlet to handle file content
+- freemarker
+
+---
+
+- maven
+- running from command line

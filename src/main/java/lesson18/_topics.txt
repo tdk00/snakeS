@@ -1,0 +1,15 @@
+- warm up
+
+- SQL idea
+- db connection
+- table creating
+- insertion data to table
+- deletion from table
+- joins
+- keys
+- prepared statements
+- result set
+
+---
+- maven
+- running from command line
