@@ -1,1 +1,1 @@
-JDBC #1 / 2
+SQL & JDBC #1 / 2

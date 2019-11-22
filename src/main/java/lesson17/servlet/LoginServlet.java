@@ -1,4 +1,4 @@
-package lesson17;
+package lesson17.servlet;
 
 import lesson17.service.Auth;
 

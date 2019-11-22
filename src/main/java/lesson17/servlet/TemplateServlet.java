@@ -1,6 +1,7 @@
-package lesson17;
+package lesson17.servlet;
 
 import lesson09.dao.Person;
+import lesson17.TemplateEngine;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
